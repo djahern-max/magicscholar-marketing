@@ -1,43 +1,41 @@
 #!/bin/bash
 
-# MagicScholar Marketing Site Deployment Script
-# Usage: ./deploy.sh
+set -e  # Exit on any error
 
+echo "🚀 Deploying Marketing Site to Production..."
+
+# Check for uncommitted changes
+if [[ -n $(git status -s) ]]; then
+    echo "⚠️  You have uncommitted changes. Please commit or stash them first."
+    exit 1
+fi
+
+# Push to GitHub
+echo "📤 Pushing to GitHub..."
+git push origin main
+
+# Deploy to server
+echo "🔄 Deploying to server..."
+ssh magicscholar-do << 'ENDSSH'
 set -e
 
-echo "🚀 Starting MagicScholar Marketing deployment..."
+cd /var/www/magicscholar/marketing
 
-# Check if Docker is running
-if ! docker info > /dev/null 2>&1; then
-    echo "❌ Docker is not running. Please start Docker first."
-    exit 1
-fi
+echo "📥 Pulling latest changes..."
+git pull origin main
 
-# Pull latest changes (if using git)
-if [ -d .git ]; then
-    echo "📥 Pulling latest changes..."
-    git pull
-fi
+echo "📦 Installing dependencies..."
+npm install --production
 
-# Stop existing container
-echo "🛑 Stopping existing container..."
-docker-compose down
+echo "🏗️  Building Next.js application..."
+npm run build
 
-# Build and start
-echo "🔨 Building and starting container..."
-docker-compose up -d --build
+echo "🔄 Restarting marketing container..."
+cd /var/www/magicscholar
+docker-compose -f docker-compose.prod.yml up -d --build marketing
 
-# Wait for health check
-echo "⏳ Waiting for service to be healthy..."
-sleep 10
+echo "✅ Marketing site deployed successfully!"
+ENDSSH
 
-# Check if container is running
-if docker-compose ps | grep -q "Up"; then
-    echo "✅ Deployment successful!"
-    echo "📱 Marketing site is running on port 3001"
-    echo "🌐 Visit: http://localhost:3001"
-else
-    echo "❌ Deployment failed. Checking logs..."
-    docker-compose logs
-    exit 1
-fi
+echo "✨ Deployment complete!"
+echo "🌐 Visit: https://www.magicscholar.com"
