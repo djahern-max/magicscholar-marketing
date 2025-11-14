@@ -24,8 +24,8 @@ cd /var/www/magicscholar/marketing
 echo "📥 Pulling latest changes..."
 git pull origin main
 
-echo "📦 Installing dependencies..."
-npm install --production
+echo "📦 Installing dependencies (including dev dependencies for build)..."
+npm install
 
 echo "🏗️  Building Next.js application..."
 npm run build
