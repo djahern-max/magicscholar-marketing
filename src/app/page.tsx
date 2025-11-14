@@ -1,10 +1,10 @@
 'use client'
 
-import { 
-  GraduationCap, 
-  DollarSign, 
-  Calendar, 
-  CheckCircle, 
+import {
+  GraduationCap,
+  DollarSign,
+  Calendar,
+  CheckCircle,
   TrendingUp,
   FileText,
   Bell,
@@ -40,7 +40,7 @@ export default function Home() {
             </div>
 
             {/* CTA Button */}
-            <a 
+            <a
               href="https://app.magicscholar.com"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
@@ -56,11 +56,11 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Navigate College Applications with{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Confidence
+              Confidence TEST
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Track college applications, discover scholarships, and manage deadlines—all in one place. 
+            Track college applications, discover scholarships, and manage deadlines—all in one place.
             AI-powered tools for pennies. Built for students, counselors, and families navigating higher education.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,7 +139,7 @@ export default function Home() {
               College Application Tracking
             </h3>
             <p className="text-gray-600 mb-4">
-              Monitor every application from research to enrollment. Track status, deadlines, 
+              Monitor every application from research to enrollment. Track status, deadlines,
               and requirements for all your target schools.
             </p>
             <ul className="space-y-2">
@@ -167,7 +167,7 @@ export default function Home() {
               Scholarship Discovery & Tracking
             </h3>
             <p className="text-gray-600 mb-4">
-              Find scholarships that match your profile. Track applications, deadlines, 
+              Find scholarships that match your profile. Track applications, deadlines,
               and requirements—never miss an opportunity.
             </p>
             <ul className="space-y-2">
@@ -195,7 +195,7 @@ export default function Home() {
               AI-Powered Resume Parsing
             </h3>
             <p className="text-gray-600 mb-4">
-              Upload your resume and let AI automatically extract your achievements, 
+              Upload your resume and let AI automatically extract your achievements,
               activities, and qualifications to match you with opportunities.
             </p>
             <ul className="space-y-2">
@@ -223,7 +223,7 @@ export default function Home() {
               Financial Transparency
             </h3>
             <p className="text-gray-600 mb-4">
-              Access real tuition data and financial information for every institution. 
+              Access real tuition data and financial information for every institution.
               Make informed decisions based on actual costs.
             </p>
             <ul className="space-y-2">
@@ -352,21 +352,21 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-3">Students</h3>
               <p className="text-blue-100">
-                Take control of your college applications. Track deadlines, discover 
+                Take control of your college applications. Track deadlines, discover
                 scholarships, and stay organized throughout the process.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-3">Parents & Families</h3>
               <p className="text-blue-100">
-                Support your student with visibility into their applications and finances. 
+                Support your student with visibility into their applications and finances.
                 Find opportunities to make college more affordable.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-3">Counselors & Advisors</h3>
               <p className="text-blue-100">
-                Help multiple students stay on track. Access comprehensive tools to guide 
+                Help multiple students stay on track. Access comprehensive tools to guide
                 students through applications and financial planning.
               </p>
             </div>
@@ -385,22 +385,22 @@ export default function Home() {
               CampusConnect: Coming Soon
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              A comprehensive directory platform connecting institutions with prospective students. 
+              A comprehensive directory platform connecting institutions with prospective students.
               Reach families, counselors, and independent advisors actively searching for the right college fit.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-left">
                 <h3 className="text-xl font-bold text-white mb-3">Enhanced Visibility</h3>
                 <p className="text-blue-100">
-                  Premium listings in our growing network of students and families actively 
+                  Premium listings in our growing network of students and families actively
                   using MagicScholar for college planning.
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-left">
                 <h3 className="text-xl font-bold text-white mb-3">Admin Dashboard</h3>
                 <p className="text-blue-100">
-                  Manage your institution's profile, update information, and track engagement 
+                  Manage your institution's profile, update information, and track engagement
                   with prospective students.
                 </p>
               </div>
@@ -409,8 +409,8 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">Why CampusConnect?</h3>
               <p className="text-blue-100 mb-4">
-                With college enrollment down and competition increasing, institutions need better 
-                ways to reach qualified prospective students. CampusConnect connects you directly 
+                With college enrollment down and competition increasing, institutions need better
+                ways to reach qualified prospective students. CampusConnect connects you directly
                 with families actively planning their college journey.
               </p>
               <p className="text-lg text-blue-200 font-semibold">
