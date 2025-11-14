@@ -7,10 +7,8 @@ import {
   CheckCircle,
   TrendingUp,
   FileText,
-  Bell,
   Target
 } from 'lucide-react'
-import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -56,7 +54,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Navigate College Applications with{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Confidence TEST
+              Confidence
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -84,7 +82,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-            College Planning Shouldn't Be Overwhelming
+            College Planning Shouldn&apos;t Be Overwhelming
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
@@ -284,7 +282,7 @@ export default function Home() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Future AI Features</h4>
                     <p className="text-gray-600">
-                      As we add more AI capabilities, you'll pay the same low rate—only when you use them.
+                      As we add more AI capabilities, you&apos;ll pay the same low rate—only when you use them.
                     </p>
                   </div>
                 </div>
@@ -344,7 +342,7 @@ export default function Home() {
               Built for Everyone in the Journey
             </h2>
             <p className="text-xl text-blue-100">
-              Whether you're applying or helping someone apply
+              Whether you&apos;re applying or helping someone apply
             </p>
           </div>
 
@@ -400,7 +398,7 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-left">
                 <h3 className="text-xl font-bold text-white mb-3">Admin Dashboard</h3>
                 <p className="text-blue-100">
-                  Manage your institution's profile, update information, and track engagement
+                  Manage your institution&apos;s profile, update information, and track engagement
                   with prospective students.
                 </p>
               </div>
@@ -538,7 +536,10 @@ export default function Home() {
                   <span className="text-blue-300">CampusConnect (Coming Soon)</span>
                 </li>
                 <li>
-                  <a href="mailto:contact@magicscholar.com?subject=CampusConnect%20Interest" className="hover:text-white transition-colors">
+                  <a
+                    href="mailto:contact@magicscholar.com?subject=CampusConnect%20Interest"
+                    className="hover:text-white transition-colors"
+                  >
                     Request Information
                   </a>
                 </li>
