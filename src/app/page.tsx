@@ -39,19 +39,32 @@ export default function Home() {
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              <a
+                href="#features"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
                 Features
               </a>
-              <a href="#for-institutions" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              <a
+                href="#for-institutions"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
                 For Institutions
               </a>
-              <a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+              <a
+                href="#pricing"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
                 Pricing
               </a>
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                About
+              <a
+                href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              >
+                Contact
               </a>
             </nav>
+
 
             {/* CTA Button */}
             <div className="flex items-center gap-3">
@@ -605,7 +618,7 @@ export default function Home() {
                 </li>
               </ul>
               <a
-                href="mailto:contact@magicscholar.com?subject=Scholarship%20Provider%20Signup"
+                href="mailto:dane@magicscholar.com?subject=Scholarship%20Provider%20Signup"
                 className="block w-full bg-green-600 text-white text-center px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold"
               >
                 Start Free Trial
@@ -640,7 +653,7 @@ export default function Home() {
                 </li>
               </ul>
               <a
-                href="mailto:contact@magicscholar.com?subject=Institution%20Signup"
+                href="mailto:dane@magicscholar.com?subject=Institution%20Signup"
                 className="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center px-6 py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all font-semibold shadow-md"
               >
                 Start Free Trial
@@ -821,7 +834,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="mailto:contact@magicscholar.com?subject=Institution%20Interest"
+                    href="mailto:dane@magicscholar.com?subject=Institution%20Interest"
                     className="hover:text-white transition-colors"
                   >
                     College Signup
@@ -829,7 +842,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="mailto:contact@magicscholar.com?subject=Scholarship%20Interest"
+                    href="mailto:dane@magicscholar.com?subject=Scholarship%20Interest"
                     className="hover:text-white transition-colors"
                   >
                     Scholarship Signup
@@ -846,12 +859,15 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:dane@magicscholar.com" className="hover:text-white transition-colors">
+                  <a
+                    href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+                    className="hover:text-white transition-colors"
+                  >
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:support@magicscholar.com" className="hover:text-white transition-colors">
+                  <a href="mailto:dane@magicscholar.com" className="hover:text-white transition-colors">
                     Support
                   </a>
                 </li>
