@@ -15,7 +15,9 @@ import {
   ArrowRight,
   Play,
   Menu,
-  X
+  X,
+  Copy,
+  Check
 } from 'lucide-react'
 import { useState } from 'react'
 
@@ -24,6 +26,13 @@ export default function Home() {
   const [campusConnectNoticeOpen, setCampusConnectNoticeOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [contactModalOpen, setContactModalOpen] = useState(false)
+  const [emailCopied, setEmailCopied] = useState(false)
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('dane@magicscholar.com')
+    setEmailCopied(true)
+    setTimeout(() => setEmailCopied(false), 2000)
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -196,58 +205,58 @@ export default function Home() {
       {/* Contact Modal */}
       {contactModalOpen && (
         <div
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
           onClick={() => setContactModalOpen(false)}
         >
           <div
-            className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl"
+            className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Get in Touch
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Contact Us
             </h3>
-            <p className="text-gray-600 mb-6">
-              Have questions about MagicScholar or CampusConnect? We&apos;d love to hear from you!
-            </p>
             
-            <div className="space-y-4">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <div className="font-semibold text-gray-900 mb-2">Email Us</div>
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl p-6 mb-6">
+              <div className="text-center mb-4">
                 <a 
-                  href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
-                  className="text-blue-600 hover:text-blue-700 font-medium break-all"
+                  href="mailto:dane@magicscholar.com"
+                  className="text-lg sm:text-xl font-semibold text-blue-600 hover:text-blue-700 break-all"
                 >
                   dane@magicscholar.com
                 </a>
-                <p className="text-sm text-gray-600 mt-2">
-                  Click to open in your email app, or copy this address to use in Gmail/Outlook.
-                </p>
               </div>
-
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                <div className="font-semibold text-gray-900 mb-2">What to Include</div>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Are you a student, institution, or scholarship provider?</li>
-                  <li>• What questions do you have?</li>
-                  <li>• How can we help?</li>
-                </ul>
-              </div>
+              
+              <button
+                onClick={copyEmail}
+                className="w-full bg-white border-2 border-blue-600 text-blue-600 px-4 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold flex items-center justify-center gap-2"
+              >
+                {emailCopied ? (
+                  <>
+                    <Check size={20} />
+                    Copied!
+                  </>
+                ) : (
+                  <>
+                    <Copy size={20} />
+                    Copy Email
+                  </>
+                )}
+              </button>
             </div>
 
-            <div className="flex justify-end gap-3 mt-6">
+            <div className="flex gap-3">
               <button
                 type="button"
                 onClick={() => setContactModalOpen(false)}
-                className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium"
+                className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold"
               >
                 Close
               </button>
               <a
-                href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
-                onClick={() => setContactModalOpen(false)}
-                className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-semibold"
+                href="mailto:dane@magicscholar.com"
+                className="flex-1 px-4 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 font-semibold text-center"
               >
-                Open Email App
+                Open Mail
               </a>
             </div>
           </div>
@@ -909,12 +918,12 @@ export default function Home() {
               Launch App
               <ArrowRight size={20} />
             </a>
-            <a
-              href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+            <button
+              onClick={() => setContactModalOpen(true)}
               className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold"
             >
               Contact Us
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -989,17 +998,20 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+                  <button
+                    onClick={() => setContactModalOpen(true)}
                     className="hover:text-white transition-colors"
                   >
                     Contact
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="mailto:dane@magicscholar.com" className="hover:text-white transition-colors">
+                  <button
+                    onClick={() => setContactModalOpen(true)}
+                    className="hover:text-white transition-colors"
+                  >
                     Support
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
