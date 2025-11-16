@@ -13,13 +13,17 @@ import {
   Globe,
   Sparkles,
   ArrowRight,
-  Play
+  Play,
+  Menu,
+  X
 } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Home() {
   const [videoModalOpen, setVideoModalOpen] = useState(false)
   const [campusConnectNoticeOpen, setCampusConnectNoticeOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [contactModalOpen, setContactModalOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-white">
@@ -32,12 +36,12 @@ export default function Home() {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
                 <Sparkles className="text-white" size={24} />
               </div>
-              <span className="text-2xl font-bold text-gray-900">
+              <span className="text-xl sm:text-2xl font-bold text-gray-900">
                 MagicScholar
               </span>
             </div>
 
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               <a
                 href="#features"
@@ -57,17 +61,16 @@ export default function Home() {
               >
                 Pricing
               </a>
-              <a
-                href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+              <button
+                onClick={() => setContactModalOpen(true)}
                 className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
               >
                 Contact
-              </a>
+              </button>
             </nav>
 
-
-            {/* CTA Button */}
-            <div className="flex items-center gap-3">
+            {/* Desktop CTA Buttons */}
+            <div className="hidden md:flex items-center gap-3">
               <a
                 href="https://app.magicscholar.com"
                 className="bg-blue-600 text-white px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold shadow-sm hover:shadow-md text-sm sm:text-base"
@@ -82,7 +85,72 @@ export default function Home() {
                 CampusConnect
               </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+              <nav className="flex flex-col gap-3">
+                <a
+                  href="#features"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 hover:bg-gray-50 rounded"
+                >
+                  Features
+                </a>
+                <a
+                  href="#for-institutions"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 hover:bg-gray-50 rounded"
+                >
+                  For Institutions
+                </a>
+                <a
+                  href="#pricing"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 hover:bg-gray-50 rounded"
+                >
+                  Pricing
+                </a>
+                <button
+                  onClick={() => {
+                    setContactModalOpen(true)
+                    setMobileMenuOpen(false)
+                  }}
+                  className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 hover:bg-gray-50 rounded w-full"
+                >
+                  Contact
+                </button>
+                <div className="border-t border-gray-200 pt-3 mt-2 flex flex-col gap-3">
+                  <a
+                    href="https://app.magicscholar.com"
+                    className="bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center shadow-sm"
+                  >
+                    Open MagicScholar
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCampusConnectNoticeOpen(true)
+                      setMobileMenuOpen(false)
+                    }}
+                    className="px-4 py-3 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold bg-white"
+                  >
+                    CampusConnect
+                  </button>
+                </div>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
@@ -125,6 +193,67 @@ export default function Home() {
         </div>
       )}
 
+      {/* Contact Modal */}
+      {contactModalOpen && (
+        <div
+          className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 px-4"
+          onClick={() => setContactModalOpen(false)}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Get in Touch
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Have questions about MagicScholar or CampusConnect? We&apos;d love to hear from you!
+            </p>
+            
+            <div className="space-y-4">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div className="font-semibold text-gray-900 mb-2">Email Us</div>
+                <a 
+                  href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+                  className="text-blue-600 hover:text-blue-700 font-medium break-all"
+                >
+                  dane@magicscholar.com
+                </a>
+                <p className="text-sm text-gray-600 mt-2">
+                  Click to open in your email app, or copy this address to use in Gmail/Outlook.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                <div className="font-semibold text-gray-900 mb-2">What to Include</div>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Are you a student, institution, or scholarship provider?</li>
+                  <li>• What questions do you have?</li>
+                  <li>• How can we help?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex justify-end gap-3 mt-6">
+              <button
+                type="button"
+                onClick={() => setContactModalOpen(false)}
+                className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium"
+              >
+                Close
+              </button>
+              <a
+                href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
+                onClick={() => setContactModalOpen(false)}
+                className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-semibold"
+              >
+                Open Email App
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50">
@@ -133,16 +262,17 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 <Sparkles size={16} />
-                MagicScholar for students • CampusConnect for institutions
+                MagicScholar for students â€¢ CampusConnect for institutions
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 College Planning Made Clear for Everyone
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
                 MagicScholar helps students discover colleges and scholarships while giving institutions CampusConnect&mdash;a modern way to reach qualified prospective students right as they plan their future.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* Mobile-first: Watch Demo first, then Get Started */}
+              <div className="flex flex-col-reverse sm:flex-row gap-4">
                 <a
                   href="https://app.magicscholar.com"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all text-lg font-semibold shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2"
