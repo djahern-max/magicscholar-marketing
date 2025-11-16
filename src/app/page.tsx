@@ -412,11 +412,22 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a
-              href="mailto:contact@magicscholar.com?subject=CampusConnect%20Institution%20Interest"
+              href="mailto:dane@magicscholar.com?subject=CampusConnect%20Institution%20Interest"
               className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all text-lg font-semibold shadow-lg hover:shadow-xl"
             >
               Get Started with CampusConnect
             </a>
+            <p className="text-blue-200 mt-4">
+              Or email us directly at{" "}
+              <a
+                href="mailto:dane@magicscholar.com?subject=CampusConnect%20Institution%20Interest"
+                className="underline hover:text-white"
+              >
+                dane@magicscholar.com
+              </a>
+              .
+            </p>
+
             <p className="text-blue-200 mt-4">
               We&apos;ll personally help you set up and optimize your profile &bull; Free onboarding support
             </p>
@@ -756,7 +767,7 @@ export default function Home() {
               <ArrowRight size={20} />
             </a>
             <a
-              href="mailto:contact@magicscholar.com?subject=CampusConnect%20Interest"
+              href="mailto:dane@magicscholar.com?subject=MagicScholar%20and%20CampusConnect%20Inquiry"
               className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold"
             >
               Contact Us
@@ -835,7 +846,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:contact@magicscholar.com" className="hover:text-white transition-colors">
+                  <a href="mailto:dane@magicscholar.com" className="hover:text-white transition-colors">
                     Contact
                   </a>
                 </li>
