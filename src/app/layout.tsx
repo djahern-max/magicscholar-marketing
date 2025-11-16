@@ -5,9 +5,9 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'MagicScholar',
+  title: 'MagicScholar - College Planning & Scholarship Discovery Platform',
   description:
-    'The complete college planning platform connecting students with opportunities and institutions with qualified prospects. Free application tracking, AI-powered scholarship matching, and CampusConnect for colleges. Start your 30-day free trial.',
+    'The complete college planning platform connecting students with opportunities and institutions with qualified prospects. Free application tracking, AI-powered scholarship matching, and CampusConnect for colleges.',
   keywords: [
     'college application tracking',
     'scholarship finder',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false
   },
-  metadataBase: new URL('https://www.magicscholar.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.magicscholar.com'),
   alternates: {
     canonical: '/'
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/opengraph-image', // Next.js will automatically serve this
         width: 1200,
         height: 630,
         alt: 'MagicScholar - College Planning Platform'
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: 'MagicScholar - College Planning & Student-Institution Connection',
     description:
       'Free college application tracking, AI scholarship matching, and CampusConnect for institutions.',
-    images: ['/og-image.png']
+    // images: ['/og-image.png'] // Comment out until created
   },
   robots: {
     index: true,
@@ -74,10 +74,10 @@ export const metadata: Metadata = {
       { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', sizes: 'any' }
     ],
-    apple: '/apple-touch-icon.png',
+    // apple: '/apple-touch-icon.png', // Comment out until created
     shortcut: '/favicon.ico'
   },
-  manifest: '/site.webmanifest',
+  // manifest: '/site.webmanifest', // Comment out until created
   themeColor: '#2563eb',
   appleWebApp: {
     capable: true,
@@ -115,12 +115,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         priceCurrency: 'USD',
         description: 'Colleges and universities - Monthly subscription'
       }
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      ratingCount: '1'
-    }
+    ]
+    // REMOVED: Fake aggregateRating - add back when you have real reviews
   }
 
   return (

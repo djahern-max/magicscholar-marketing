@@ -1,19 +1,16 @@
 {
   "name": "MagicScholar",
   "short_name": "MagicScholar",
-  "description": "College planning platform connecting students with opportunities and institutions with qualified prospects.",
+  "description": "College Planning & Scholarship Discovery Platform",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "type": "image/svg+xml"
     }
   ]
 }

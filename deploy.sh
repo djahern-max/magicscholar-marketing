@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e  # Exit on any error
 
 echo "🚀 Deploying Marketing Site to Production..."
@@ -23,6 +22,9 @@ cd /var/www/magicscholar/marketing
 
 echo "📥 Pulling latest changes..."
 git pull origin main
+
+echo "🧹 Clearing Next.js cache..."
+rm -rf .next
 
 echo "📦 Installing dependencies (including dev dependencies for build)..."
 npm install
