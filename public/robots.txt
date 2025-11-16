@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block internal Next.js build assets
+Disallow: /_next/
+Disallow: /__nextjs_original-stack-frame/
+
+# Optional: block API routes from being indexed
+Disallow: /api/
+
+Sitemap: https://www.magicscholar.com/sitemap.xml
