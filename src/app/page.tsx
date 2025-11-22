@@ -23,7 +23,6 @@ import { useState } from 'react'
 
 export default function Home() {
   const [videoModalOpen, setVideoModalOpen] = useState(false)
-  const [campusConnectNoticeOpen, setCampusConnectNoticeOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [contactModalOpen, setContactModalOpen] = useState(false)
   const [emailCopied, setEmailCopied] = useState(false)
@@ -86,13 +85,12 @@ export default function Home() {
               >
                 MagicScholar
               </a>
-              <button
-                type="button"
-                onClick={() => setCampusConnectNoticeOpen(true)}
+              <a
+                href="https://abacadaba.com/"
                 className="px-4 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold text-sm sm:text-base bg-white"
               >
-                CampusConnect
-              </button>
+                Abacadaba
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -146,61 +144,18 @@ export default function Home() {
                   >
                     Open MagicScholar
                   </a>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setCampusConnectNoticeOpen(true)
-                      setMobileMenuOpen(false)
-                    }}
-                    className="px-4 py-3 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold bg-white"
+                  <a
+                    href="https://abacadaba.com/"
+                    className="px-4 py-3 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold bg-white text-center"
                   >
-                    CampusConnect
-                  </button>
+                    Abacadaba
+                  </a>
                 </div>
               </nav>
             </div>
           )}
         </div>
       </header>
-
-      {/* CampusConnect Coming Soon Popup */}
-      {campusConnectNoticeOpen && (
-        <div
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 px-4"
-          onClick={() => setCampusConnectNoticeOpen(false)}
-        >
-          <div
-            className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              CampusConnect is Coming Soon
-            </h3>
-            <p className="text-gray-600 mb-4">
-              We&apos;re putting the finishing touches on CampusConnect&mdash;the portal that lets
-              colleges and scholarship providers build rich pages students discover inside MagicScholar.
-            </p>
-            <p className="text-gray-600 mb-6">
-              In the meantime, you can explore the student experience in MagicScholar today.
-            </p>
-            <div className="flex justify-end gap-3">
-              <button
-                type="button"
-                onClick={() => setCampusConnectNoticeOpen(false)}
-                className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium"
-              >
-                Close
-              </button>
-              <a
-                href="https://app.magicscholar.com"
-                className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-semibold"
-              >
-                Open MagicScholar
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Contact Modal */}
       {contactModalOpen && (
@@ -271,14 +226,14 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 <Sparkles size={16} />
-                MagicScholar for students • CampusConnect for institutions
+                MagicScholar for students • Abacadaba for institutions
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 College Planning Made Clear for Everyone
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                MagicScholar helps students discover colleges and scholarships while giving institutions CampusConnect&mdash;a modern way to reach qualified prospective students right as they plan their future.
+                MagicScholar helps students discover colleges and scholarships while giving institutions Abacadaba&mdash;a modern way to reach qualified prospective students right as they plan their future.
               </p>
               {/* Mobile-first: Watch Demo first, then Get Started */}
               <div className="flex flex-col-reverse sm:flex-row gap-4">
@@ -341,12 +296,12 @@ export default function Home() {
       <section className="bg-gradient-to-br from-gray-900 to-blue-900 py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            See MagicScholar & CampusConnect in Action
+            See MagicScholar & Abacadaba in Action
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
             Watch how independent college advisors, guidance counselors, high schools, and families use{" "}
             <span className="font-semibold">MagicScholar</span> to support students&mdash;and how colleges and scholarship providers use{" "}
-            <span className="font-semibold">CampusConnect</span> to power the pages those students discover.
+            <span className="font-semibold">Abacadaba</span> to power the pages those students discover.
           </p>
 
           {/* Video Placeholder */}
@@ -355,7 +310,7 @@ export default function Home() {
               <Play className="text-white mx-auto mb-4" size={64} />
               <p className="text-white text-xl font-semibold">Video Coming Soon</p>
               <p className="text-gray-400 mt-2">
-                This demo will cover both the student-facing MagicScholar app and the CampusConnect portal for colleges and scholarship providers.
+                This demo will cover both the student-facing MagicScholar app and the Abacadaba portal for colleges and scholarship providers.
               </p>
             </div>
           </div>
@@ -386,51 +341,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Proposition - The Problem */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Bridging the Gap in Higher Education
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Students need guidance to find the right fit. Institutions need efficient ways to reach the right students. MagicScholar connects both sides of the journey.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8 border border-red-200">
-              <div className="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <Calendar className="text-red-600" size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Students Need Support</h3>
-              <p className="text-gray-700 leading-relaxed">
-                The college application process is complex and fragmented. Students need a single place to organize deadlines, requirements, and opportunities that align with who they are.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-8 border border-orange-200">
-              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <DollarSign className="text-orange-600" size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Unclaimed Opportunities</h3>
-              <p className="text-gray-700 leading-relaxed">
-                An estimated $100 million in scholarships and billions in federal grants go unclaimed every year. Many awards are small, local, or niche&mdash;and students simply never find them.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-200">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="text-blue-600" size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enrollment Challenges</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Demographic shifts are shrinking traditional applicant pools. Institutions need more targeted, student-friendly ways to stand out and build relationships early in the process.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* For Institutions Section - PRIMARY VALUE PROP */}
       <section
@@ -443,7 +353,7 @@ export default function Home() {
               FOR COLLEGES & SCHOLARSHIP PROVIDERS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              CampusConnect: Reach the Right Students at the Right Time
+              Abacadaba: Reach the Right Students at the Right Time
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Show up where students are actively planning their future. Refresh your profile, showcase programs with rich visuals, and connect with qualified prospects&mdash;without a heavy lift from your team.
@@ -535,7 +445,7 @@ export default function Home() {
           {/* Why Now Section */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">
-              Why CampusConnect Matters Now
+              Why Abacadaba Matters Now
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
@@ -564,15 +474,15 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a
-              href="mailto:dane@magicscholar.com?subject=CampusConnect%20Institution%20Interest"
+              href="mailto:dane@magicscholar.com?subject=Abacadaba%20Institution%20Interest"
               className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all text-lg font-semibold shadow-lg hover:shadow-xl"
             >
-              Get Started with CampusConnect
+              Get Started with Abacadaba
             </a>
             <p className="text-blue-200 mt-4">
               Or email us directly at{" "}
               <a
-                href="mailto:dane@magicscholar.com?subject=CampusConnect%20Institution%20Interest"
+                href="mailto:dane@magicscholar.com?subject=Abacadaba%20Institution%20Interest"
                 className="underline hover:text-white"
               >
                 dane@magicscholar.com
@@ -968,7 +878,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#for-institutions" className="hover:text-white transition-colors">
-                    CampusConnect
+                    Abacadaba
                   </a>
                 </li>
                 <li>
