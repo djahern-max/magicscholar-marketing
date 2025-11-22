@@ -32,8 +32,12 @@ npm install
 echo "🏗️  Building Next.js application..."
 npm run build
 
-echo "🔄 Restarting marketing container..."
+echo "🔄 Stopping existing marketing container..."
 cd /var/www/magicscholar
+docker-compose -f docker-compose.prod.yml stop marketing || true
+docker-compose -f docker-compose.prod.yml rm -f marketing || true
+
+echo "🚀 Starting new marketing container..."
 docker-compose -f docker-compose.prod.yml up -d --build marketing
 
 echo "✅ Marketing site deployed successfully!"
