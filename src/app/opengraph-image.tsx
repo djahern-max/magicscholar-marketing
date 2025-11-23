@@ -68,9 +68,9 @@ export default async function Image() {
             }}
           >
             <span>Choosing a college</span>
-            <span>shouldn't be</span>
+            <span>shouldn&apos;t be</span>
           </div>
-          
+
           {/* A B C D on separate line */}
           <div
             style={{
@@ -99,7 +99,7 @@ export default async function Image() {
 
         {/* Bottom */}
         <div style={{ fontSize: 24, color: '#6b7280' }}>
-          Real data from institutions & scholarships—no more guessing games.
+          Real data from institutions &amp; scholarships—no more guessing games.
         </div>
       </div>
     ),
