@@ -1,4 +1,4 @@
-// app/opengraph-image.tsx
+// src/app/opengraph-image.tsx
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
@@ -49,7 +49,7 @@ export default function OGImage() {
               justifyContent: 'center',
             }}
           >
-            <span style={{ fontSize: 22 }}>✶</span>
+            <span style={{ fontSize: 22 }}>✨</span>
           </div>
 
           <span style={{ fontWeight: 600, color: '#111827' }}>MagicScholar</span>
