@@ -1,137 +1,46 @@
-// src/app/layout.tsx
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import Script from 'next/script'
 import './globals.css'
 
+export const viewport: Viewport = {
+  themeColor: '#2563eb'
+}
+
 export const metadata: Metadata = {
   title: 'MagicScholar - College Planning & Scholarship Discovery Platform',
   description:
-    'The complete college planning platform connecting students with opportunities and institutions with qualified prospects. Free application tracking, AI-powered scholarship matching, and CampusConnect for colleges.',
-  keywords: [
-    'college application tracking',
-    'scholarship finder',
-    'college planning',
-    'higher education marketing',
-    'student recruitment',
-    'college admissions',
-    'scholarship matching',
-    'AI college planning',
-    'campus recruitment platform',
-    'college counseling tools',
-    'institution marketing',
-    'student engagement platform'
-  ],
-  authors: [{ name: 'MagicScholar' }],
-  creator: 'MagicScholar',
-  publisher: 'MagicScholar',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false
-  },
+    'The complete college planning platform connecting students with opportunities and institutions with qualified prospects.',
+
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.magicscholar.com'),
-  alternates: {
-    canonical: '/'
-  },
-  openGraph: {
-    title: 'MagicScholar - College Planning & Student-Institution Connection',
-    description:
-      'Connect students with opportunities and institutions with qualified prospects. Free college application tracking, AI-powered scholarship matching, and CampusConnect for colleges.',
-    url: 'https://www.magicscholar.com',
-    siteName: 'MagicScholar',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: '/opengraph-image', // Next.js will automatically serve this
-        width: 1200,
-        height: 630,
-        alt: 'MagicScholar - College Planning Platform'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'MagicScholar - College Planning & Student-Institution Connection',
-    description:
-      'Free college application tracking, AI scholarship matching, and CampusConnect for institutions.',
-    // images: ['/og-image.png'] // Comment out until created
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  },
+
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', sizes: 'any' }
     ],
-    // apple: '/apple-touch-icon.png', // Comment out until created
+    apple: '/apple-touch-icon.png',
     shortcut: '/favicon.ico'
   },
-  // manifest: '/site.webmanifest', // Comment out until created
-  themeColor: '#2563eb',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'MagicScholar'
-  }
-}
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: 'MagicScholar',
+  openGraph: {
+    title: 'MagicScholar - College Planning & Student-Institution Connection',
     description:
-      'College planning platform connecting students with opportunities and institutions with qualified prospects',
+      'Connect students with opportunities and institutions with qualified prospects.',
     url: 'https://www.magicscholar.com',
-    applicationCategory: 'EducationalApplication',
-    operatingSystem: 'Web',
-    offers: [
+    images: [
       {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-        description: 'Free for students - Core platform features'
-      },
-      {
-        '@type': 'Offer',
-        price: '19.99',
-        priceCurrency: 'USD',
-        description: 'Scholarship providers - Monthly subscription'
-      },
-      {
-        '@type': 'Offer',
-        price: '39.99',
-        priceCurrency: 'USD',
-        description: 'Colleges and universities - Monthly subscription'
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630
       }
     ]
-    // REMOVED: Fake aggregateRating - add back when you have real reviews
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MagicScholar - College Planning & Student-Institution Connection',
+    description:
+      'Free college application tracking, AI scholarship matching, and CampusConnect for institutions.',
   }
-
-  return (
-    <html lang="en">
-      <body>
-        {children}
-
-        {/* JSON-LD for rich results */}
-        <Script
-          id="magicscholar-ld-json"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </body>
-    </html>
-  )
 }

@@ -1,167 +1,131 @@
-import { ImageResponse } from 'next/og'
+// app/opengraph-image.tsx
+import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge'
-export const alt = 'MagicScholar - Let&apos;s Make College Magical'
-export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+export const runtime = 'edge';
 
-export default async function Image() {
+export const size = {
+  width: 1200,
+  height: 630,
+};
+
+export const contentType = 'image/png';
+
+export default function OGImage() {
   return new ImageResponse(
     (
       <div
         style={{
-          height: '100%',
           width: '100%',
+          height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundImage:
-            'linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #06b6d4 100%)',
-          padding: '80px',
-          position: 'relative',
+          justifyContent: 'space-between',
+          padding: '64px 96px',
+          backgroundColor: '#ffffff',
+          color: '#111827',
+          fontFamily:
+            'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
         }}
       >
-        {/* Decorative sparkles/stars */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '100px',
-            left: '150px',
-            fontSize: '48px',
-            opacity: 0.4,
-          }}
-        >
-          ✨
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            top: '180px',
-            right: '200px',
-            fontSize: '36px',
-            opacity: 0.3,
-          }}
-        >
-          ⭐
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '120px',
-            left: '200px',
-            fontSize: '42px',
-            opacity: 0.35,
-          }}
-        >
-          ✨
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '200px',
-            right: '150px',
-            fontSize: '38px',
-            opacity: 0.3,
-          }}
-        >
-          ⭐
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            top: '150px',
-            right: '400px',
-            fontSize: '32px',
-            opacity: 0.25,
-          }}
-        >
-          ✨
-        </div>
-
-        {/* Logo */}
+        {/* Top: subtle brand row with sparkle logo */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            marginBottom: '48px',
+            gap: 12,
+            fontSize: 24,
+            color: '#6b7280',
           }}
         >
+          {/* Sparkle-in-a-circle logo (simple OG version) */}
           <div
             style={{
-              width: '80px',
-              height: '80px',
-              background: 'rgba(255, 255, 255, 0.2)',
-              borderRadius: '16px',
+              width: 40,
+              height: 40,
+              borderRadius: '9999px',
+              border: '1px solid #d1d5db',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginRight: '20px',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
             }}
           >
-            <span style={{ fontSize: '48px' }}>✨</span>
+            <span style={{ fontSize: 22 }}>✶</span>
           </div>
+
+          <span style={{ fontWeight: 600, color: '#111827' }}>MagicScholar</span>
+          <span style={{ opacity: 0.4 }}>•</span>
+          <span style={{ fontWeight: 500, color: '#4b5563' }}>Abacadaba</span>
+        </div>
+
+        {/* Middle: main message + A/B/C/D visual */}
+        <div>
           <div
             style={{
-              fontSize: '48px',
-              fontWeight: 700,
-              color: 'white',
-              letterSpacing: '-0.5px',
+              fontSize: 56,
+              fontWeight: 600,
+              lineHeight: 1.1,
+              maxWidth: 800,
             }}
           >
-            MagicScholar
+            Choosing a college
+            <br />
+            shouldn&apos;t be{' '}
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'baseline',
+                gap: 12,
+              }}
+            >
+              {/* Big A */}
+              <span
+                style={{
+                  fontSize: 96,
+                  fontWeight: 800,
+                  letterSpacing: '-0.05em',
+                }}
+              >
+                A
+              </span>
+
+              {/* B C D progressively smaller / lighter */}
+              <span
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'flex-end',
+                  gap: 6,
+                  color: '#9ca3af',
+                }}
+              >
+                <span style={{ fontSize: 40, fontWeight: 600 }}>B</span>
+                <span style={{ fontSize: 32, fontWeight: 600, opacity: 0.8 }}>
+                  C
+                </span>
+                <span style={{ fontSize: 26, fontWeight: 600, opacity: 0.6 }}>
+                  D
+                </span>
+              </span>
+
+              <span style={{ fontSize: 48, fontWeight: 600, color: '#111827' }}>
+                guess.
+              </span>
+            </span>
           </div>
         </div>
 
-        {/* Main magical heading */}
+        {/* Bottom: tiny supporting line */}
         <div
           style={{
-            fontSize: '92px',
-            fontWeight: 900,
-            color: 'white',
-            lineHeight: 1.1,
-            marginBottom: '32px',
-            textAlign: 'center',
-            letterSpacing: '-2px',
-            display: 'flex',
-            flexDirection: 'column',
+            fontSize: 24,
+            color: '#6b7280',
           }}
         >
-          <span>Let&apos;s Make</span>
-          <span>College Magical</span>
-        </div>
-
-        {/* Simple subheading */}
-        <div
-          style={{
-            fontSize: '36px',
-            fontWeight: 600,
-            color: 'rgba(255, 255, 255, 0.95)',
-            textAlign: 'center',
-            marginBottom: '48px',
-          }}
-        >
-          Free Tools for Students & Families
-        </div>
-
-        {/* URL */}
-        <div
-          style={{
-            fontSize: '28px',
-            fontWeight: 700,
-            color: 'rgba(255, 255, 255, 0.9)',
-            letterSpacing: '0.5px',
-            background: 'rgba(255, 255, 255, 0.15)',
-            padding: '16px 32px',
-            borderRadius: '12px',
-            border: '2px solid rgba(255, 255, 255, 0.25)',
-          }}
-        >
-          magicscholar.com
+          Real data from institutions &amp; scholarships—no more guessing games.
         </div>
       </div>
     ),
-    { ...size }
-  )
+    {
+      ...size,
+    }
+  );
 }
