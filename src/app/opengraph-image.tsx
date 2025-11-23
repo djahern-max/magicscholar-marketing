@@ -2,15 +2,14 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-
+export const alt = 'MagicScholar - College Planning Platform';
 export const size = {
   width: 1200,
   height: 630,
 };
-
 export const contentType = 'image/png';
 
-export default function OGImage() {
+export default async function Image() {
   return new ImageResponse(
     (
       <div
@@ -23,11 +22,10 @@ export default function OGImage() {
           padding: '64px 96px',
           backgroundColor: '#ffffff',
           color: '#111827',
-          fontFamily:
-            'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+          fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         }}
       >
-        {/* Top: subtle brand row with sparkle logo */}
+        {/* Top: Brand */}
         <div
           style={{
             display: 'flex',
@@ -37,12 +35,11 @@ export default function OGImage() {
             color: '#6b7280',
           }}
         >
-          {/* Sparkle-in-a-circle logo (simple OG version) */}
           <div
             style={{
               width: 40,
               height: 40,
-              borderRadius: '9999px',
+              borderRadius: 9999,
               border: '1px solid #d1d5db',
               display: 'flex',
               alignItems: 'center',
@@ -51,76 +48,58 @@ export default function OGImage() {
           >
             <span style={{ fontSize: 22 }}>✨</span>
           </div>
-
           <span style={{ fontWeight: 600, color: '#111827' }}>MagicScholar</span>
           <span style={{ opacity: 0.4 }}>•</span>
           <span style={{ fontWeight: 500, color: '#4b5563' }}>Abacadaba</span>
         </div>
 
-        {/* Middle: main message + A/B/C/D visual */}
-        <div>
+        {/* Main Message - Simplified without inline-flex */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div
             style={{
               fontSize: 56,
               fontWeight: 600,
               lineHeight: 1.1,
-              maxWidth: 800,
+              maxWidth: 900,
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'flex-end',
+              gap: 16,
             }}
           >
-            Choosing a college
-            <br />
-            shouldn&apos;t be{' '}
-            <span
-              style={{
-                display: 'inline-flex',
-                alignItems: 'baseline',
-                gap: 12,
-              }}
-            >
-              {/* Big A */}
-              <span
-                style={{
-                  fontSize: 96,
-                  fontWeight: 800,
-                  letterSpacing: '-0.05em',
-                }}
-              >
-                A
-              </span>
-
-              {/* B C D progressively smaller / lighter */}
-              <span
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'flex-end',
-                  gap: 6,
-                  color: '#9ca3af',
-                }}
-              >
-                <span style={{ fontSize: 40, fontWeight: 600 }}>B</span>
-                <span style={{ fontSize: 32, fontWeight: 600, opacity: 0.8 }}>
-                  C
-                </span>
-                <span style={{ fontSize: 26, fontWeight: 600, opacity: 0.6 }}>
-                  D
-                </span>
-              </span>
-
-              <span style={{ fontSize: 48, fontWeight: 600, color: '#111827' }}>
-                guess.
-              </span>
+            <span>Choosing a college</span>
+            <span>shouldn't be</span>
+          </div>
+          
+          {/* A B C D on separate line */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'flex-end',
+              gap: 16,
+            }}
+          >
+            <span style={{ fontSize: 96, fontWeight: 800, letterSpacing: '-0.05em' }}>
+              A
+            </span>
+            <span style={{ fontSize: 40, fontWeight: 600, color: '#9ca3af' }}>
+              B
+            </span>
+            <span style={{ fontSize: 32, fontWeight: 600, color: '#9ca3af', opacity: 0.8 }}>
+              C
+            </span>
+            <span style={{ fontSize: 26, fontWeight: 600, color: '#9ca3af', opacity: 0.6 }}>
+              D
+            </span>
+            <span style={{ fontSize: 56, fontWeight: 600, color: '#111827' }}>
+              guess.
             </span>
           </div>
         </div>
 
-        {/* Bottom: tiny supporting line */}
-        <div
-          style={{
-            fontSize: 24,
-            color: '#6b7280',
-          }}
-        >
-          Real data from institutions &amp; scholarships—no more guessing games.
+        {/* Bottom */}
+        <div style={{ fontSize: 24, color: '#6b7280' }}>
+          Real data from institutions & scholarships—no more guessing games.
         </div>
       </div>
     ),

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/opengraph-image', // Next.js will handle this route
+        url: '/opengraph-image.png', // UPDATED: Added .png extension
         width: 1200,
         height: 630,
         alt: 'MagicScholar - College Planning Platform',
@@ -47,7 +47,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'MagicScholar - College Planning & Student-Institution Connection',
     description:
-      'Free college application tracking, AI scholarship matching, and CampusConnect for institutions.',
+      'Free college application tracking, AI scholarship matching, and Abacadaba for institutions.',
+    images: ['/opengraph-image.png'], // UPDATED: Added explicit twitter image with .png
   },
 };
 

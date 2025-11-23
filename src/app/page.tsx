@@ -40,9 +40,9 @@ export default function Home() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center gap-3 group">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-blue-200 bg-white">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-yellow-200 bg-white">
                 <Sparkles
-                  className="h-5 w-5 text-blue-500 transition-transform group-hover:rotate-12 group-hover:text-blue-700"
+                  className="h-5 w-5 text-yellow-500 transition-transform group-hover:rotate-12 group-hover:text-yellow-600"
                   aria-hidden="true"
                 />
               </span>
@@ -806,9 +806,9 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-blue-300 bg-white/5">
+                <div className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-yellow-300 bg-white/5">
                   <Sparkles
-                    className="h-4 w-4 text-blue-300"
+                    className="h-4 w-4 text-yellow-400"
                     aria-hidden="true"
                   />
                 </div>
@@ -816,6 +816,8 @@ export default function Home() {
                   MagicScholar
                 </span>
               </div>
+
+
               <p className="text-sm leading-relaxed">
                 Empowering students with free planning tools while giving
                 institutions and scholarship funds a clear way to reach them via
