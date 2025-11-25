@@ -40,9 +40,9 @@ export default function Home() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center gap-3 group">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-yellow-200 bg-white">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white">
                 <Sparkles
-                  className="h-5 w-5 text-yellow-500 transition-transform group-hover:rotate-12 group-hover:text-yellow-600"
+                  className="h-5 w-5 text-gray-600 transition-transform group-hover:rotate-12 group-hover:text-gray-800"
                   aria-hidden="true"
                 />
               </span>
