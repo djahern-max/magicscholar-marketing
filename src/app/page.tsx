@@ -808,7 +808,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-yellow-300 bg-white/5">
                   <Sparkles
-                    className="h-4 w-4 text-yellow-400"
+                    className="h-4 w-4 text-white"
                     aria-hidden="true"
                   />
                 </div>
