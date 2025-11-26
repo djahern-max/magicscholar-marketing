@@ -39,17 +39,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div className="flex items-center gap-3 group">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white">
-                <Sparkles
-                  className="h-5 w-5 text-gray-600 transition-transform group-hover:rotate-12 group-hover:text-gray-800"
-                  aria-hidden="true"
-                />
-              </span>
-              <span className="text-xl sm:text-2xl font-bold text-gray-900">
-                MagicScholar
+            <div className="flex items-center gap-2 group">
+              <Sparkles
+                className="h-4 w-4 text-indigo-500 opacity-80 group-hover:opacity-100 group-hover:rotate-12 transition-all"
+                aria-hidden="true"
+              />
+
+              <span className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Magic
+                </span>
+                <span>Scholar</span>
               </span>
             </div>
+
+
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
@@ -237,26 +241,18 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left side copy */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                <Sparkles size={16} />
-                College shouldn&apos;t be an A–B–C–D guess.
-              </div>
-
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                One platform, two paths:
+                College planning,
                 <br />
-                <span className="text-blue-600">MagicScholar</span> for students.
-                <br />
-                <span className="text-gray-900">Abacadaba</span> for institutions.
+                without the guesswork.
               </h1>
 
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Institutions and scholarship funds build rich, accurate pages on{' '}
-                <span className="font-semibold">Abacadaba</span>. That data flows
-                directly into <span className="font-semibold">MagicScholar</span>,
-                where students, families, and the advisors who support them discover
-                colleges and scholarships with clarity—not guesswork.
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl">
+                <span className="font-semibold">MagicScholar</span> helps students stay organized.
+                <br className="hidden sm:block" />
+                <span className="font-semibold">Abacadaba</span> keeps college info accurate.
               </p>
 
               <div className="flex flex-col-reverse sm:flex-row gap-4">
@@ -289,8 +285,7 @@ export default function Home() {
                         Student-facing discovery
                       </div>
                       <div className="text-sm text-gray-600">
-                        MagicScholar surfaces colleges and scholarships in a way that
-                        feels clear, organized, and approachable.
+                        A clean way for students to compare colleges and scholarships.
                       </div>
                     </div>
                   </div>
@@ -303,8 +298,7 @@ export default function Home() {
                         Institution-powered data
                       </div>
                       <div className="text-sm text-gray-600">
-                        Abacadaba pages keep tuition, programs, and scholarship details
-                        accurate—so families aren&apos;t guessing from outdated info.
+                        Colleges and funds keep tuition, programs, and awards accurate.
                       </div>
                     </div>
                   </div>
@@ -317,8 +311,7 @@ export default function Home() {
                         Aligned, not adversarial
                       </div>
                       <div className="text-sm text-gray-600">
-                        When colleges publish clear information and students see it in
-                        context, everyone makes better, more confident decisions.
+                        Shared data puts students and institutions on the same page.
                       </div>
                     </div>
                   </div>
@@ -328,6 +321,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* Video Section */}
       <section className="bg-gradient-to-br from-gray-900 to-blue-900 py-24">
@@ -805,15 +801,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-yellow-300 bg-white/5">
-                  <Sparkles
-                    className="h-4 w-4 text-white"
-                    aria-hidden="true"
-                  />
-                </div>
-                <span className="text-xl font-bold text-white">
-                  MagicScholar
+              <div className="flex items-center gap-2 mb-4 group">
+                <Sparkles
+                  className="h-4 w-4 text-indigo-300 opacity-80 group-hover:opacity-100 group-hover:rotate-12 transition-all"
+                  aria-hidden="true"
+                />
+
+                <span className="text-xl font-bold text-white tracking-tight">
+                  <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+                    Magic
+                  </span>
+                  <span>Scholar</span>
                 </span>
               </div>
 
