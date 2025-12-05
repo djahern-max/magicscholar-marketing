@@ -96,7 +96,7 @@ export default function Home() {
                 Open MagicScholar
               </a>
               <a
-                href="https://thecollegedirectory.com"
+                href="https://thecollegedirectory.com/"
                 className="px-4 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold text-sm sm:text-base bg-white"
               >
                 Visit The College Directory
@@ -162,7 +162,7 @@ export default function Home() {
                     Open MagicScholar
                   </a>
                   <a
-                    href="https://thecollegedirectory.com"
+                    href="https://thecollegedirectory.com/"
                     className="px-4 py-3 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold bg-white text-center"
                   >
                     Visit The College Directory
@@ -244,13 +244,16 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 College planning,
                 <br />
-                without the guesswork.
+                built on real information.
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl">
-                <span className="font-semibold">MagicScholar</span> helps students stay organized.
+                <span className="font-semibold">MagicScholar</span> helps students stay
+                organized and compare options.
                 <br className="hidden sm:block" />
-                <span className="font-semibold">The College Directory</span> keeps college info accurate and up to date.
+                <span className="font-semibold">The College Directory</span> keeps
+                college data current and visual for the students who are actually
+                deciding.
               </p>
 
               <div className="flex flex-col-reverse sm:flex-row gap-4">
@@ -262,7 +265,7 @@ export default function Home() {
                   <ArrowRight size={20} />
                 </a>
                 <a
-                  href="https://thecollegedirectory.com"
+                  href="https://thecollegedirectory.com/"
                   className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all text-lg font-semibold inline-flex items-center justify-center gap-2"
                 >
                   For Institutions: The College Directory
@@ -283,7 +286,8 @@ export default function Home() {
                         Student-facing discovery
                       </div>
                       <div className="text-sm text-gray-600">
-                        A clean way for students to compare colleges and scholarships.
+                        A clean way for students to compare colleges and curated
+                        scholarships in one place.
                       </div>
                     </div>
                   </div>
@@ -296,7 +300,8 @@ export default function Home() {
                         Institution-powered data
                       </div>
                       <div className="text-sm text-gray-600">
-                        Colleges and funds keep tuition, programs, and awards accurate through The College Directory.
+                        Colleges keep key details accurate while The College Directory
+                        handles the underlying IPEDS and reference data.
                       </div>
                     </div>
                   </div>
@@ -306,10 +311,11 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">
-                        Aligned, not adversarial
+                        Shared source of truth
                       </div>
                       <div className="text-sm text-gray-600">
-                        Shared data puts students and institutions on the same page.
+                        The same core data powers student tools and institutional
+                        profiles, so conversations start from reality—not guesswork.
                       </div>
                     </div>
                   </div>
@@ -324,13 +330,14 @@ export default function Home() {
       <section className="bg-gradient-to-br from-gray-900 to-blue-900 py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            See how the pieces fit together
+            See how MagicScholar and The College Directory connect
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
             This short demo will walk through how institutions use{' '}
-            <span className="font-semibold">The College Directory</span> to build pages—and how
-            those same pages appear in <span className="font-semibold">MagicScholar</span>{' '}
-            when students search for colleges and scholarships.
+            <span className="font-semibold">The College Directory</span> to build
+            pages—and how those pages appear in{' '}
+            <span className="font-semibold">MagicScholar</span> when students search
+            and plan.
           </p>
 
           <div className="bg-gray-800 rounded-2xl aspect-video flex items-center justify-center border-2 border-gray-700 shadow-2xl">
@@ -354,9 +361,12 @@ export default function Home() {
               One ecosystem. Two experiences.
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The College Directory is where colleges and scholarship providers tell their story.
-              MagicScholar is where students and families discover it—with tools that
-              remove the guesswork.
+              <span className="font-semibold">The College Directory</span> is where
+              colleges keep their story and data current.
+              <br className="hidden sm:block" />
+              <span className="font-semibold">MagicScholar</span> is where students and
+              families explore those colleges—alongside curated scholarships—in a
+              workspace they actually use.
             </p>
           </div>
 
@@ -376,7 +386,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-blue-600 mt-0.5" size={18} />
-                  <span>Surface scholarships that actually fit the student profile.</span>
+                  <span>Surface curated scholarships that fit the student profile.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-blue-600 mt-0.5" size={18} />
@@ -387,11 +397,11 @@ export default function Home() {
 
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                The College Directory for Institutions &amp; Scholarships
+                The College Directory for Institutions
               </h3>
               <p className="text-gray-600 mb-6">
-                A simple way for colleges and scholarship funds to create beautiful,
-                accurate pages that feed directly into MagicScholar search results.
+                A simple way for colleges to create rich, accurate pages that feed
+                directly into MagicScholar search results and student planning tools.
               </p>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -400,11 +410,14 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-gray-700 mt-0.5" size={18} />
-                  <span>Showcase your campus and opportunities with photos and video.</span>
+                  <span>Showcase your campus with photos, video, and student stories.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-gray-700 mt-0.5" size={18} />
-                  <span>Ensure students see up-to-date information where they&apos;re searching.</span>
+                  <span>
+                    Ensure students see up-to-date information where they&apos;re actually
+                    building their lists.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -418,23 +431,21 @@ export default function Home() {
         className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 py-24"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Headline + IPEDS story */}
           <div className="text-center mb-16">
             <div className="inline-block bg-blue-500/20 backdrop-blur-sm px-6 py-2 rounded-full text-blue-300 font-semibold mb-6 border border-blue-400/30">
-              FOR COLLEGES &amp; SCHOLARSHIP PROVIDERS
+              FOR COLLEGES &amp; UNIVERSITIES
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              The College Directory: fix what IPEDS can&apos;t keep up with
+              The College Directory: your story, on top of IPEDS
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              We start with <span className="font-semibold">IPEDS as the baseline</span>—then put
-              control back in your hands. Update tuition, programs, deadlines, and awards
-              in real time, add photos and video, and make sure students see the version
-              of your institution you&apos;re living today, not last year&apos;s snapshot.
+              We start with <span className="font-semibold">IPEDS as the baseline</span>{' '}
+              so you never begin from zero—then let you correct and enhance what&apos;s
+              out-of-date with current data, photos, and video that reflect your campus
+              today.
             </p>
           </div>
 
-          {/* Two cards: Colleges / Scholarships */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Colleges */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -446,13 +457,11 @@ export default function Home() {
                   For Colleges &amp; Universities
                 </h3>
               </div>
-
               <div className="space-y-4 mb-6">
-                <FeatureLine text="Start from IPEDS data, then correct what’s out-of-date—tuition, programs, admit rates, and more." />
+                <FeatureLine text="Start from IPEDS data, then correct what’s changed—tuition, programs, admit rates, and more." />
                 <FeatureLine text="Turn a static fact sheet into a visit-worthy experience with campus photos, video, and highlights." />
-                <FeatureLine text="See simple engagement signals so you know when students are discovering and revisiting your page." />
+                <FeatureLine text="See basic engagement trends so you know how often students are discovering your page." />
               </div>
-
               <PlanBadge
                 price="$39.99/month"
                 accent="blue"
@@ -460,32 +469,29 @@ export default function Home() {
               />
             </div>
 
-            {/* Scholarships */}
+            {/* Scholarships – how they’re handled (not a paid product) */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
                   <DollarSign className="text-white" size={24} />
                 </div>
                 <h3 className="text-2xl font-bold text-white">
-                  For Scholarship Providers
+                  Scholarship Listings (Free &amp; Curated)
                 </h3>
               </div>
-
               <div className="space-y-4 mb-6">
-                <FeatureLine text="Move beyond hidden PDFs and static listings—publish a living, searchable scholarship page." />
-                <FeatureLine text="Update deadlines, award amounts, and eligibility in minutes so students always see the current rules." />
-                <FeatureLine text="Add context, stories, and media that explain who you want to support and why it matters." />
+                <FeatureLine text="We research, import, and maintain scholarship data manually—no separate login or subscription needed." />
+                <FeatureLine text="Keep scholarship discovery free for students while you focus on telling your institution’s story." />
+                <FeatureLine text="When you partner with The College Directory, your curated scholarships appear alongside your institution in MagicScholar." />
               </div>
-
               <PlanBadge
-                price="$19.99/month"
+                price="$0"
                 accent="green"
-                note="30-day free trial • Cancel anytime"
+                note="Scholarship listings are free • Data curated by our team"
               />
             </div>
           </div>
 
-          {/* Why it matters */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">
               Why The College Directory matters on top of IPEDS
@@ -507,12 +513,11 @@ export default function Home() {
                 label="Richer storytelling"
                 highlight="Human"
                 color="cyan"
-                text="Layer in photos, video, and narrative so your page feels like a conversation, not just a spreadsheet export."
+                text="Layer in photos, video, and narrative so your page feels like a real introduction, not just a spreadsheet export."
               />
             </div>
           </div>
 
-          {/* CTA */}
           <div className="text-center mt-12">
             <a
               href="mailto:dane@magicscholar.com?subject=The%20College%20Directory%20Institution%20Interest"
@@ -538,9 +543,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
       {/* Student Features Section */}
       <section
         id="features"
@@ -549,7 +551,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              MagicScholar: for students who don&apos;t want to guess
+              MagicScholar: for students who want clarity, not chaos
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Free tools that turn the college and scholarship process from a pile of
@@ -569,7 +571,7 @@ export default function Home() {
             <FeatureCard
               icon={<DollarSign className="text-green-600" size={28} />}
               title="Scholarship Discovery"
-              body="Discover scholarships that match your profile—including smaller, niche opportunities students usually miss."
+              body="Discover curated scholarships that match your profile—including smaller, niche opportunities students usually miss."
               bg="green"
             />
             <FeatureCard
@@ -581,13 +583,13 @@ export default function Home() {
             <FeatureCard
               icon={<Calendar className="text-orange-600" size={28} />}
               title="Deadline Management"
-              body="Never guess whether you missed something. Stay ahead of application, scholarship, and financial aid deadlines."
+              body="Stay ahead of application, scholarship, and financial aid deadlines in one unified timeline."
               bg="orange"
             />
             <FeatureCard
               icon={<FileText className="text-indigo-600" size={28} />}
               title="Deep Institution Data"
-              body="Explore tuition, programs, admissions data, and campus visuals in one place—powered by The College Directory pages."
+              body="Explore tuition, programs, admissions data, and campus visuals in one place—powered by The College Directory."
               bg="indigo"
             />
             <FeatureCard
@@ -608,13 +610,13 @@ export default function Home() {
               Simple, transparent pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              MagicScholar stays free for students. The College Directory offers affordable plans
-              for institutions and scholarship funds that want to publish rich,
-              student-friendly pages.
+              MagicScholar stays free for students. The College Directory offers
+              affordable plans for institutions, while scholarship listings remain
+              free and curated by us.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Students */}
             <PricingCard
               label="FOR STUDENTS"
@@ -623,7 +625,7 @@ export default function Home() {
               subtitle="Core Platform"
               bullets={[
                 'Unlimited college tracking',
-                'Scholarship discovery',
+                'Curated scholarship discovery',
                 'Deadline management',
                 'AI-assisted profile creation'
               ]}
@@ -632,25 +634,9 @@ export default function Home() {
               highlight
             />
 
-            {/* Scholarship Providers */}
-            <PricingCard
-              label="SCHOLARSHIPS"
-              color="green"
-              price="$19.99"
-              subtitle="per month"
-              bullets={[
-                'Complete scholarship profile',
-                'Photo & video support',
-                'Student matching context',
-                'Setup support included'
-              ]}
-              ctaLabel="Start Free Trial"
-              ctaHref="mailto:dane@magicscholar.com?subject=Scholarship%20Provider%20Signup"
-            />
-
             {/* Institutions */}
             <PricingCard
-              label="COLLEGES"
+              label="FOR COLLEGES"
               color="indigo"
               price="$39.99"
               subtitle="per month"
@@ -663,11 +649,27 @@ export default function Home() {
               ctaLabel="Start Free Trial"
               ctaHref="mailto:dane@magicscholar.com?subject=Institution%20Signup"
             />
+
+            {/* Scholarship Listings (informational, $0) */}
+            <PricingCard
+              label="SCHOLARSHIP LISTINGS"
+              color="green"
+              price="$0"
+              subtitle="curated & maintained"
+              bullets={[
+                'Manually curated by our team',
+                'No login or subscription required',
+                'Kept in sync with public information',
+                'Shown directly in student search'
+              ]}
+              ctaLabel="Learn About Our Approach"
+              ctaHref="mailto:dane@magicscholar.com?subject=Scholarship%20Listing%20Question"
+            />
           </div>
 
           <p className="text-center text-gray-600 mt-12 text-lg">
-            All plans include a 30-day free trial • No credit card required • Cancel
-            anytime
+            No hidden fees • Students always free • Scholarship records maintained by
+            us so you don&apos;t have to.
           </p>
         </div>
       </section>
@@ -681,7 +683,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Whether you&apos;re applying, supporting, or recruiting, the same data
-              powers clearer conversations—and fewer guesses.
+              powers clearer conversations—and fewer surprises.
             </p>
           </div>
 
@@ -702,13 +704,13 @@ export default function Home() {
               icon={<FileText className="text-orange-600" size={32} />}
               bg="orange"
               title="Advisors & Counselors"
-              text="Support many students at once with organized tracking, shared deadlines, and institution-powered data you can trust."
+              text="Support many students at once with organized tracking, shared deadlines, and institution-backed data."
             />
             <WhoCard
               icon={<Globe className="text-indigo-600" size={32} />}
               bg="indigo"
               title="Institutions"
-              text="Reach qualified prospects who are actively building lists and comparing options, not just browsing."
+              text="Reach qualified prospects who are actively building lists—not just casually browsing your homepage."
             />
           </div>
         </div>
@@ -726,9 +728,9 @@ export default function Home() {
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed">
               We believe college planning should be accessible, transparent, and far
-              less stressful. MagicScholar gives students powerful tools for free
-              while The College Directory helps institutions publish clear, honest information in
-              the same ecosystem.
+              less stressful. MagicScholar gives students powerful tools for free,
+              while The College Directory helps institutions present clear, honest,
+              and current information in the same ecosystem.
             </p>
           </div>
 
@@ -747,13 +749,13 @@ export default function Home() {
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                For Institutions &amp; Funds
+                For Institutions
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                We help colleges and scholarship providers reach students who are
-                actively planning their future. No complex integrations, no long
-                enterprise cycles—just affordable tools to publish rich pages that
-                feed directly into MagicScholar.
+                We help colleges reach students who are actively planning their
+                future. No complex integrations, no long enterprise cycles—just
+                affordable tools to publish rich pages that feed directly into
+                MagicScholar.
               </p>
             </div>
           </div>
@@ -777,11 +779,12 @@ export default function Home() {
       <section className="bg-gray-900 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to remove the guesswork?
+            Ready to build on real, current information?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join students, families, and institutions using MagicScholar and
-            The College Directory to make clearer, more confident decisions about college.
+            Join students, families, and institutions using MagicScholar and The
+            College Directory to make clearer, more confident decisions about
+            college.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -821,9 +824,8 @@ export default function Home() {
               </div>
 
               <p className="text-sm leading-relaxed">
-                Empowering students with free planning tools while giving
-                institutions and scholarship funds a clear way to reach them via
-                The College Directory.
+                Empowering students with free planning tools while giving institutions
+                a clear way to reach them via The College Directory.
               </p>
             </div>
             <div>
@@ -876,14 +878,6 @@ export default function Home() {
                     College Signup
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="mailto:dane@magicscholar.com?subject=Scholarship%20Interest"
-                    className="hover:text-white transition-colors"
-                  >
-                    Scholarship Signup
-                  </a>
-                </li>
               </ul>
             </div>
             <div>
@@ -919,8 +913,7 @@ export default function Home() {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
               <p>
-                &copy; {new Date().getFullYear()} MagicScholar. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} MagicScholar. All rights reserved.
               </p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-white transition-colors">
