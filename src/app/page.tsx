@@ -53,8 +53,6 @@ export default function Home() {
               </span>
             </div>
 
-
-
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               <a
@@ -98,10 +96,10 @@ export default function Home() {
                 Open MagicScholar
               </a>
               <a
-                href="https://abacadaba.com/"
+                href="https://thecollegedirectory.com"
                 className="px-4 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold text-sm sm:text-base bg-white"
               >
-                Visit Abacadaba
+                Visit The College Directory
               </a>
             </div>
 
@@ -164,10 +162,10 @@ export default function Home() {
                     Open MagicScholar
                   </a>
                   <a
-                    href="https://abacadaba.com/"
+                    href="https://thecollegedirectory.com"
                     className="px-4 py-3 rounded-lg border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold bg-white text-center"
                   >
-                    Visit Abacadaba
+                    Visit The College Directory
                   </a>
                 </div>
               </nav>
@@ -252,7 +250,7 @@ export default function Home() {
               <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl">
                 <span className="font-semibold">MagicScholar</span> helps students stay organized.
                 <br className="hidden sm:block" />
-                <span className="font-semibold">Abacadaba</span> keeps college info accurate.
+                <span className="font-semibold">The College Directory</span> keeps college info accurate and up to date.
               </p>
 
               <div className="flex flex-col-reverse sm:flex-row gap-4">
@@ -264,10 +262,10 @@ export default function Home() {
                   <ArrowRight size={20} />
                 </a>
                 <a
-                  href="https://abacadaba.com/"
+                  href="https://thecollegedirectory.com"
                   className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all text-lg font-semibold inline-flex items-center justify-center gap-2"
                 >
-                  For Institutions: Abacadaba
+                  For Institutions: The College Directory
                 </a>
               </div>
             </div>
@@ -298,7 +296,7 @@ export default function Home() {
                         Institution-powered data
                       </div>
                       <div className="text-sm text-gray-600">
-                        Colleges and funds keep tuition, programs, and awards accurate.
+                        Colleges and funds keep tuition, programs, and awards accurate through The College Directory.
                       </div>
                     </div>
                   </div>
@@ -322,9 +320,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
       {/* Video Section */}
       <section className="bg-gradient-to-br from-gray-900 to-blue-900 py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -333,7 +328,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
             This short demo will walk through how institutions use{' '}
-            <span className="font-semibold">Abacadaba</span> to build pages—and how
+            <span className="font-semibold">The College Directory</span> to build pages—and how
             those same pages appear in <span className="font-semibold">MagicScholar</span>{' '}
             when students search for colleges and scholarships.
           </p>
@@ -359,7 +354,7 @@ export default function Home() {
               One ecosystem. Two experiences.
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Abacadaba is where colleges and scholarship providers tell their story.
+              The College Directory is where colleges and scholarship providers tell their story.
               MagicScholar is where students and families discover it—with tools that
               remove the guesswork.
             </p>
@@ -392,7 +387,7 @@ export default function Home() {
 
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Abacadaba for Institutions &amp; Scholarships
+                The College Directory for Institutions &amp; Scholarships
               </h3>
               <p className="text-gray-600 mb-6">
                 A simple way for colleges and scholarship funds to create beautiful,
@@ -417,7 +412,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* For Institutions Section (Abacadaba) */}
+      {/* For Institutions Section (The College Directory) */}
       <section
         id="for-institutions"
         className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 py-24"
@@ -428,11 +423,11 @@ export default function Home() {
               FOR COLLEGES &amp; SCHOLARSHIP PROVIDERS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Abacadaba: tell your story where students are deciding
+              The College Directory: tell your story where students are deciding
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Instead of hoping students stumble onto your website, publish a rich,
-              student-friendly page on Abacadaba that appears directly inside
+              student-friendly page on The College Directory that appears directly inside
               MagicScholar when they search for their best-fit options.
             </p>
           </div>
@@ -487,7 +482,7 @@ export default function Home() {
 
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">
-              Why Abacadaba matters in a no-guesswork world
+              Why The College Directory matters in a no-guesswork world
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
               <WhyCard
@@ -513,15 +508,15 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a
-              href="mailto:dane@magicscholar.com?subject=Abacadaba%20Institution%20Interest"
+              href="mailto:dane@magicscholar.com?subject=The%20College%20Directory%20Institution%20Interest"
               className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all text-lg font-semibold shadow-lg hover:shadow-xl"
             >
-              Get Started with Abacadaba
+              Get Started with The College Directory
             </a>
             <p className="text-blue-200 mt-4">
               Or email us directly at{' '}
               <a
-                href="mailto:dane@magicscholar.com?subject=Abacadaba%20Institution%20Interest"
+                href="mailto:dane@magicscholar.com?subject=The%20College%20Directory%20Institution%20Interest"
                 className="underline hover:text-white"
               >
                 dane@magicscholar.com
@@ -582,7 +577,7 @@ export default function Home() {
             <FeatureCard
               icon={<FileText className="text-indigo-600" size={28} />}
               title="Deep Institution Data"
-              body="Explore tuition, programs, admissions data, and campus visuals in one place—powered by Abacadaba pages."
+              body="Explore tuition, programs, admissions data, and campus visuals in one place—powered by The College Directory pages."
               bg="indigo"
             />
             <FeatureCard
@@ -603,7 +598,7 @@ export default function Home() {
               Simple, transparent pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              MagicScholar stays free for students. Abacadaba offers affordable plans
+              MagicScholar stays free for students. The College Directory offers affordable plans
               for institutions and scholarship funds that want to publish rich,
               student-friendly pages.
             </p>
@@ -722,7 +717,7 @@ export default function Home() {
             <p className="text-xl text-gray-700 leading-relaxed">
               We believe college planning should be accessible, transparent, and far
               less stressful. MagicScholar gives students powerful tools for free
-              while Abacadaba helps institutions publish clear, honest information in
+              while The College Directory helps institutions publish clear, honest information in
               the same ecosystem.
             </p>
           </div>
@@ -776,7 +771,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join students, families, and institutions using MagicScholar and
-            Abacadaba to make clearer, more confident decisions about college.
+            The College Directory to make clearer, more confident decisions about college.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -815,11 +810,10 @@ export default function Home() {
                 </span>
               </div>
 
-
               <p className="text-sm leading-relaxed">
                 Empowering students with free planning tools while giving
                 institutions and scholarship funds a clear way to reach them via
-                Abacadaba.
+                The College Directory.
               </p>
             </div>
             <div>
@@ -861,7 +855,7 @@ export default function Home() {
                     href="#for-institutions"
                     className="hover:text-white transition-colors"
                   >
-                    Abacadaba Overview
+                    The College Directory Overview
                   </a>
                 </li>
                 <li>
@@ -943,7 +937,7 @@ export default function Home() {
           >
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                MagicScholar &amp; Abacadaba Demo
+                MagicScholar &amp; The College Directory Demo
               </h3>
               <button
                 onClick={() => setVideoModalOpen(false)}
@@ -1085,8 +1079,10 @@ function PricingCard({
   ctaHref: string
   highlight?: boolean
 }) {
-  const colorMap: Record<typeof color, { bg: string; border: string; chip: string; btn: string; btnHover: string }> =
-  {
+  const colorMap: Record<
+    typeof color,
+    { bg: string; border: string; chip: string; btn: string; btnHover: string }
+  > = {
     blue: {
       bg: 'from-blue-50 to-cyan-50',
       border: 'border-blue-200',
