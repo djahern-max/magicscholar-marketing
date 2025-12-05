@@ -418,20 +418,23 @@ export default function Home() {
         className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 py-24"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Headline + IPEDS story */}
           <div className="text-center mb-16">
             <div className="inline-block bg-blue-500/20 backdrop-blur-sm px-6 py-2 rounded-full text-blue-300 font-semibold mb-6 border border-blue-400/30">
               FOR COLLEGES &amp; SCHOLARSHIP PROVIDERS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              The College Directory: tell your story where students are deciding
+              The College Directory: fix what IPEDS can&apos;t keep up with
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Instead of hoping students stumble onto your website, publish a rich,
-              student-friendly page on The College Directory that appears directly inside
-              MagicScholar when they search for their best-fit options.
+              We start with <span className="font-semibold">IPEDS as the baseline</span>—then put
+              control back in your hands. Update tuition, programs, deadlines, and awards
+              in real time, add photos and video, and make sure students see the version
+              of your institution you&apos;re living today, not last year&apos;s snapshot.
             </p>
           </div>
 
+          {/* Two cards: Colleges / Scholarships */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Colleges */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -443,13 +446,13 @@ export default function Home() {
                   For Colleges &amp; Universities
                 </h3>
               </div>
+
               <div className="space-y-4 mb-6">
-                <FeatureLine
-                  text="Keep tuition, programs, and requirements accurate in the exact place students compare schools."
-                />
-                <FeatureLine text="Use rich visuals—photos, video, campus highlights—to help students picture themselves on campus." />
-                <FeatureLine text="See basic engagement trends so you know how often students are discovering your page." />
+                <FeatureLine text="Start from IPEDS data, then correct what’s out-of-date—tuition, programs, admit rates, and more." />
+                <FeatureLine text="Turn a static fact sheet into a visit-worthy experience with campus photos, video, and highlights." />
+                <FeatureLine text="See simple engagement signals so you know when students are discovering and revisiting your page." />
               </div>
+
               <PlanBadge
                 price="$39.99/month"
                 accent="blue"
@@ -467,11 +470,13 @@ export default function Home() {
                   For Scholarship Providers
                 </h3>
               </div>
+
               <div className="space-y-4 mb-6">
-                <FeatureLine text="Reach students whose profiles align with your eligibility, not just whoever happens to find your PDF." />
-                <FeatureLine text="Update deadlines, award amounts, and requirements in minutes—no web team required." />
-                <FeatureLine text="Explain your mission with photos, stories, and context students can actually understand." />
+                <FeatureLine text="Move beyond hidden PDFs and static listings—publish a living, searchable scholarship page." />
+                <FeatureLine text="Update deadlines, award amounts, and eligibility in minutes so students always see the current rules." />
+                <FeatureLine text="Add context, stories, and media that explain who you want to support and why it matters." />
               </div>
+
               <PlanBadge
                 price="$19.99/month"
                 accent="green"
@@ -480,32 +485,34 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Why it matters */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">
-              Why The College Directory matters in a no-guesswork world
+              Why The College Directory matters on top of IPEDS
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
               <WhyCard
-                label="Shifting demographics"
-                highlight="Shifting"
+                label="IPEDS is the floor"
+                highlight="Baseline"
                 color="blue"
-                text="Smaller graduating classes and tighter budgets mean every qualified student matters more. Clear, student-centered information gives you an edge."
+                text="We import IPEDS so you never start from zero—then let you correct what’s changed since the last release."
               />
               <WhyCard
-                label="Real-time decision moments"
-                highlight="Decision"
+                label="Real-time updates"
+                highlight="Live"
                 color="green"
-                text="MagicScholar puts your page in front of students precisely when they’re building lists, comparing options, and talking with their families."
+                text="Adjust tuition, programs, deadlines, and awards as they change so students aren&apos;t planning off stale data."
               />
               <WhyCard
-                label="Simple setup"
-                highlight="Simple"
+                label="Richer storytelling"
+                highlight="Human"
                 color="cyan"
-                text="No complex integrations or heavy IT lifts. We help you launch quickly so students can stop guessing and start comparing accurately."
+                text="Layer in photos, video, and narrative so your page feels like a conversation, not just a spreadsheet export."
               />
             </div>
           </div>
 
+          {/* CTA */}
           <div className="text-center mt-12">
             <a
               href="mailto:dane@magicscholar.com?subject=The%20College%20Directory%20Institution%20Interest"
@@ -530,6 +537,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* Student Features Section */}
       <section
